@@ -12,8 +12,6 @@ g. Menampilkan data Games yang dijual oleh Game Store tertentu.
 h. Menampilkan data Game Store yang Menjual Games tertentu.
 i. Menampilkan data Game Store yang paling banyak Menjual Games dan yang paling sedikit Menjual Games. */
 
-// RAPIIN OUTPUT
-
 #include "header.h"
 #include "source.cpp"
 
@@ -49,6 +47,7 @@ int main(){
         cout << "----------------------------" << endl;
         cout << "Enter Options : ";
         cin >> pilihan;
+        system("cls");
         if (pilihan == 1)
         {
             InfoStore is;
@@ -79,6 +78,10 @@ int main(){
         }
         else if (pilihan == 3)
         {
+            viewStore(LS);
+            cout << endl;
+            viewGames(LG);
+            cout << endl;
             string idStore, idGames;
             cout << "Insert ID Game Store : ";
             cin >> idStore;
@@ -90,6 +93,8 @@ int main(){
         }
         else if (pilihan == 4)
         {
+            viewStore(LS);
+            cout << endl;
             cout << "======== CAUTION ========" << endl;
             cout << "Be careful, all store data will be deleted, press 0 to return" << endl;
             string idStore;
@@ -108,6 +113,8 @@ int main(){
         }
         else if (pilihan == 5)
         {
+            viewGames(LG);
+            cout << endl;
             cout << "======== CAUTION ========" << endl;
             cout << "Be careful, all store data will be deleted, press 0 to return" << endl;
             string idGames;
@@ -132,6 +139,8 @@ int main(){
         }
         else if (pilihan == 7)
         {
+            viewStore(LS);
+            cout << endl;
             string idStore;
             cout << "Enter The Store ID You Want To Display The Game : ";
             cin >> idStore;
@@ -141,6 +150,8 @@ int main(){
         }
         else if (pilihan == 8) 
         {
+            viewGames(LG);
+            cout << endl;
             string idGames;
             cout << "Enter The Game ID You Want To Display In The Store : ";
             cin >> idGames;
